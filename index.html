@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            margin: 0 auto;
+            border: 1px solid gray;
+            width: 350px;
+            height: 280px;
+            font-size: 15pt;
+            align-content: center;
+            
+
+        }
+        .gomb{
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            font: 10pt;
+        }
+        .input{
+            width: 50px;
+            text-align: center;
+        }
+       
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <b>Jó vagy <br>fejszámolásban?</br></b>
+    <div class="szam1"></div>
+    <div>➕</div>
+    <div class="szam2"></div>
+    <br><input type="number"></br>
+     <br><button class="ell" onclick="handleClcik()">Ellenőrzés</button></br>
+    <br><div id="emoji"></div></br>
+    </div>
+    
+    <script>
+        function rand(a){
+            return Math.floor(Math.random()*a)
+
+        }
+        let vTomb=[]
+        for(let i=1;i<=2;i++){
+            vTomb.push(rand(100))
+        }
+        console.log(vTomb)
+        document.querySelector('.szam1').innerHTML=vTomb[0]
+        document.querySelector('.szam2').innerHTML=vTomb[1]
+        
+        
+        let osszeg=0
+        for(let szam of vTomb){
+            osszeg+=szam
+        }
+        
+        console.log(osszeg)
+        
+
+
+        function handleClcik(){
+            const num = document.querySelector("input").valueAsNumber
+            console.log(num)
+            if(num == osszeg){
+                console.log('Jó')
+                document.getElementById("emoji").innerHTML="✔️"
+        }
+            else{
+                console.log('Rossz')
+                document.getElementById("emoji").innerHTML="❌"
+            }
+        }
+    </script>
+</body>
+</html>
