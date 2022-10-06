@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Másol</title>
+    <style>
+        body{
+            background-color: rgb(9, 5, 5);
+        }
+        input[type=button]{
+            background-color: rgb(150, 17, 17);
+        }
+
+        #eredeti{
+            background-color: rgba(128, 128, 128, 0.527);
+        }
+        #masolat{
+            background-color: rgba(128, 128, 128, 0.527);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <textarea id="eredeti" cols="30" rows="10">
+            A Blikk a svájci Ringier kiadó magyar leányvállalatának kiadásában 1994. március 1-jétől megjelenő magyar nyelvű bulvárlap. 1998-ig hatszor jelent meg egy héten, azóta Vasárnapi Blikk címen kiadják a hetedik lapszámot is. 2004-ig a lapot a Szikra nyomda készítette.
+        </textarea>
+        <input type="button" value="másol" onclick="masol()">
+
+        <textarea id="masolat" cols="30" rows="10"></textarea>
+        <input type="button" value="töröl" onclick="torol()">
+    </form>
+
+    <script>
+        function masol(){
+            console.log("másolás következik")
+            let szöveg=document.getElementById("eredeti").value
+            console.log(szöveg)
+            document.getElementById("masolat").value=szöveg
+
+        }
+        function torol(){
+            console.log("törlés következik")
+            document.getElementById("masolat").value=""
+        }
+    </script>
+</body>
+</html>
