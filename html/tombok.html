@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="hossz"></p>
+    <ul></ul>
+    <ol></ol>
+    <ul class="nev"></ul>
+    <script>
+        let szamok=[1,5,89,0,99,23]
+        // tömb hossza:
+        document.querySelector('.hossz').innerHTML=`A tömb hossza: ${szamok.length}`
+        // hagyományos for
+        for(let i=0;i<szamok.length;i++){
+            console.log(`Index:${i+1} érték:${szamok[i]}`)
+        }
+        //for of
+        let liStr=""
+        for(let szam of szamok){
+            console.log(szam)
+            liStr+=`<li>${szam}</li>`
+            
+        }
+        console.log(liStr)
+        document.querySelector('ul').innerHTML=liStr
+        //for in
+        for(let i in szamok){
+            console.log(`Index:${i} érték:${szamok[i]}`)
+        }
+        
+        let olStr=""
+        for(let i in szamok){
+            olStr+=`<li>értek: ${szamok[i]}</li>`
+        }
+        document.querySelector('ol').innerHTML=olStr
+        // nevek tömb
+        let olSt=""
+        let nevek=["Kardos","Antal","József"]
+        for(let i in nevek){
+                olSt+=`<li>${nevek[i]}</li>`
+        }
+        document.querySelector('.nev').innerHTML=olSt
+
+        
+        
+    </script>
+</body>
+</html>
