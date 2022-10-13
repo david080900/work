@@ -39,14 +39,20 @@
         <div class="break"></div>
         <div class="row"><input type="number" class="szam" id="szam2"></div>
         <div class="break"></div>
-        <div class="row"><input type="number"class="eredmeny" id="eredmenyek"></div>
+        <div class="row"><div class="eredmeny"></div></div>
         <div class="break"></div>
-        <div class="row"><input type="button" class="gomb"value="+" id="osszead"><input type="button" class="gomb" value="-" id="kivonas"><input type="button" class="gomb" value="/" id="osztas"><input type="button" class="gomb" value="*" id="szorzas"></div>
+        <div class="row"><input type="button" class="gomb"value="+" id="osszead" onclick="osszead()"><input type="button" class="gomb" value="-" id="kivonas" onclick="kivon()"><input type="button" class="gomb" value="/" id="osztas" onclick="osztas()"><input type="button" class="gomb" value="*" id="szorzas" onclick="szorzas()"></div>
                          
 
     </div>
     <script>
-        
+            function osszead(){
+                let szam1=+document.getElementById("szam1").value
+                let szam2=+document.getElementById("szam2").value
+                if(szam1>0 && szam2>0){
+                document.querySelector(".eredmeny").innerHTML=`= ${szam1+szan2}`
+                }
+            }
     </script>
 </body>
 </html>
