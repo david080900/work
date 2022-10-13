@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gomb{
+            color: red;
+            background-color: bisque;
+            border: 1px solid orangered;
+            font-size: 20px;
+        }
+        #oldal{
+            background-color: lightpink;
+            font-size: 20px;
+        }
+        #oldal2{
+            background-color: lightpink;
+            font-size: 20px;
+        }
+        .cim{
+            font-size: 20pt;
+            color: red;
+            font-weight: bold;
+        }
+        .terulet{
+            color: brown;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+        .kerulet{
+            color: brown;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+    
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="oldal"><p class="cim"> Add meg a négyzet oldalait:</p></label>
+        <input type="number" name="" id="oldal">
+        <input type="number" name="" id="oldal2">
+        <input class="gomb" type="button" name="" value="szamol" onclick="szamol()">
+    </form>
+    <div class="terulet">Terület</div>
+    <div class="kerulet">Kerület</div>
+    <div class="msg"></div>
+<script>
+    function szamol() {
+        document.querySelector(".msg").innerHTML=""
+        document.querySelector(".terulet").innerHTML=""
+        document.querySelector(".kerulet").innerHTML=""
+        let oldal=+document.getElementById("oldal").value
+        let oldal2=+document.getElementById("oldal2").value
+        if(oldal>0 && oldal2>0){
+            console.log(oldal,typeof(oldal))
+        document.querySelector(".terulet").innerHTML=`Terület: ${oldal*oldal2}`
+        document.querySelector(".kerulet").innerHTML=`Kerület: ${(oldal+oldal2)*2}`
+        }
+        else{
+            document.querySelector(".msg").innerHTML="Helytelen adat!"
+        }
+    }
+</script>
+</body>
+</html>
