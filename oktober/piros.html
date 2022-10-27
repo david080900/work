@@ -37,7 +37,7 @@
             <button class="btn btn-danger"> Új játék létrehozás</button>
         </form>
         <div class="row d-flex justify-content-center">
-            <table onclick="GetData(event)">
+            <table onclick="kattintas(event)">
                 <tbody>
 
                 </tbody>
@@ -80,7 +80,7 @@
             }
 
         }
-        let GetData = (e) =>{
+        let kattintas = (e) =>{
             
             if(e.target.tagName == "TD"){
                 let coordx = e.target.cellIndex;
@@ -103,6 +103,6 @@
 
         }
     </script>
-    <script src="Projekt_navbar.js"></script>
+
 </body>
 </html>
