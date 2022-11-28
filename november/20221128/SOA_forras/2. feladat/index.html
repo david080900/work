@@ -13,7 +13,7 @@
 
 		<h1>Szolgáltatásorientált architektúra (SOA)</h1>
 
-		<p> A szolgáltatásorientált architektúra (angolul Service-Oriented Architecture, röviden SOA) egy programozási
+		<p> A szolgáltatásorientált architektúra (angolul Service-Oriented Architecture, röviden <b>SOA</b>) egy programozási
 		módszer, aminek lényege, hogy az egyes szolgáltatások egy hálózatban helyezkednek el, és egy protokoll által
 		meghatározott módon kommunikálnak. Alapvető elvei függetlenek gyártóktól, termékektől, terjesztőktől és
 		technológiáktól. A szolgáltatások különálló egységek, amik távolról is elérhetők, egymástól függetlenül
@@ -31,7 +31,7 @@
 		egy nagy alkalmazás funkcionalitását nyújtsák. Azonban a szolgáltatásorientált architektúra célja nem az egyes
 		alkalmazások tagolása, és az így létrejövő, részfunkcionalitásokat nyújtó modulok közötti kapcsolat biztosítása,
 		hanem ellenkezőleg: minden szempontból önálló, saját funkcionalitással bíró, és eleve együttműködésre tervezett
-		szolgáltatások összekapcsolásán keresztül megvalósítani az üzleti folyamatokat. A SOA a vállalat üzleti
+		szolgáltatások összekapcsolásán keresztül megvalósítani az üzleti folyamatokat. A <b>SOA</b> a vállalat üzleti
 		folyamataira jellemző - valós üzleti tevékenységeket tükröző - szolgáltatások tervezésén alapul, és nem az
 		alkalmazások technológiai célú szétbontásán.</p>
 		</div>
@@ -43,8 +43,8 @@
 		<div class="row">
 		<div class="col-md-6">
 		<h1>Legfontosabb szabványok</h1>
-		<p>A SOA-t e+gy szabványos felszínen, a webszolgáltatás platformon valósítják meg. Ezt a Web szolgáltatás szabványt
-		egyformán támogatja a .NET és a Java. A SOA által használt szolgáltatásorientált környezet legfontosabb
+		<p>A <b>SOA</b>-t e+gy szabványos felszínen, a webszolgáltatás platformon valósítják meg. Ezt a Web szolgáltatás szabványt
+		egyformán támogatja a .NET és a Java. A <b>SOA</b> által használt szolgáltatásorientált környezet legfontosabb
 		szabványai a következők:</p>
 		<ul>
 		<li>SOAP, egy XML (WSDL) alapú kiterjesztett üzenet formátum (boríték).</li>
@@ -62,19 +62,19 @@
 		<h1>Minták</h1>
 			<table>
 		<tr>
-			<td>Szolgáltató</td>
+			<th class="text-white">Szolgáltató</th>
 			<td>Létrehozza a webszolgáltatást, és információt közvetít a névszolgáltatónak. Azt is leírja, hogy milyen
 				szolgáltatást nyújt, mi a fontosabb: a könnyű elérhetőség vagy a biztonság, mennyiért lehet igénybe venni, és
 				további információkat is adhat, amik bekerülnek a névszolgáltatóhoz.</td>
 		</tr>
 		<tr>
-			<td>Névszolgáltató</td>
+			<th class="text-white">Névszolgáltató</th>
 			<td>Egy névszolgáltató feladata az, hogy információt nyújtson az elérhető szolgáltatásokról. Megvalósítójuk
 				döntésétől függően lehetnek nyilvánosak vagy privátok, ez utóbbiakat nem mindenki veheti igénybe. Az UDDI egy
 				korai kísérlet volt a webszolgáltatások felderítésére.</td>
 		</tr>
 		<tr>
-			<td>Szolgáltatásigénylő</td>
+			<th class="text-white">Szolgáltatásigénylő</th>
 			<td>Az általa igényelt szolgáltatás elérhetőségét névszolgáltatónál keresi, majd a kellő információk birtokában
 				hozzákapcsolódik a szolgáltatóhoz, és meghívja szolgáltatásait. Egy résztvevő lehet egyszer szolgáltató, másszor
 				szolgáltatásigénylő. A szolgáltatók is névszolgáltatónál keresik a számukra fontos adatokat.</td>
